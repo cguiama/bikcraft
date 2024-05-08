@@ -1,0 +1,115 @@
+:root {
+  --c12: #000;
+  --c11: #111;
+  --c10: #2e2e2e;
+  --c9: #404040;
+  --c8: #595959;
+  --c7: #717171;
+  --c6: #9c9c9c;
+  --c5: #b2b2b2;
+  --c4: #ccc;
+  --c3: #dedede;
+  --c2: #f7f7f7;
+  --c1: #fff;
+
+  --p5: #320;
+  --p4: #664400;
+  --p3: #a66f00;
+  --p2: #e4a30b;
+  --p1: #fb0;
+}
+/* resets */
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* inicio */
+
+.header-bg {
+  background: var(--c12);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.header-menu a {
+  /* aumentar area de contato */
+  color: var(--c1);
+  display: inline-block;
+  padding: 16px 0;
+  font-family: Poppins;
+  font-size: 18px;
+  position: relative;
+}
+
+.header-menu a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: var(--c1);
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header-menu a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .header a::after {
+    display: none;
+  }
+
+  .header-menu {
+    gap: 20px;
+  }
+
+  .header-menu a {
+    background: var(--c11);
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+
+  .header-menu a:hover {
+    background-color: var(--c10);
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 16px;
+  }
+
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
